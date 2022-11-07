@@ -1,0 +1,44 @@
+<h1>Dragon Ball Z</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-personajes ></app-personajes>
+        <!-- [personajes]="personajes" -->
+        <!-- <h3>Personajes</h3>
+        <hr>
+        <ul>
+            <li *ngFor="let personaje of personajes">
+                {{personaje.nombre}} - {{personaje.poder | number}} <!-- | number lo colocamos para que a ese dato lo grafique como a un numero, es decir, en lugar de 1000 lo coloca como 1,000 -->
+            <!-- </li>
+        </ul> -->
+    </div>
+    <div class="col">
+        <!-- [personajes]="personajes" -->
+        <app-agregar 
+            [nuevo]="nuevo"
+            ></app-agregar>
+<!--             (onNuevoPersonaje)="agregarNuevoPersonaje( $event )" -->
+    </div>
+    <!-- <h3>Agregar {{nuevo.nombre}}</h3>
+    <hr> -->
+
+    <!-- <form (submit)="agregar($event)"> --> 
+    <!-- <form (ngSubmit)="agregar()">  <!-- Cada evento que disparamos puede recibir el $event. Esto quiere decir que nos interesa recibir en este caso, todo el evento del formulario. Este evento, lo recibimos en la funcion agregar, donde le haremos un event.preventDefault() para que no se recargue toda la pagina cada vez que mandamos el form -->
+        <!-- <input 
+            type="text" 
+            placeholder="Nombre"
+            name="nombre"
+            [(ngModel)]="nuevo.nombre"  ==> con esto elimino a la funcion cambiarNombre (la cual recibia a event.target.value)
+            > --> <!-- [()] quiere decir que quiero tanto escuchar como emitir el evento-->
+            <!-- [value]="nuevo.nombre"
+            (input)="cambiarNombre($event)" -->
+        <!-- <input 
+            type="number" 
+            placeholder="Poder"
+            name="poder"
+            [(ngModel)]="nuevo.poder" 
+        >
+        <button type="submit">Agregar</button>
+    </form> -->
+</div>

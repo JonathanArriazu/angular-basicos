@@ -1,0 +1,7 @@
+<h3>Personajes</h3>
+<hr>
+<ul>
+    <li *ngFor="let personaje of personajes">
+        {{personaje.nombre}} - {{personaje.poder | number}} <!-- | number lo colocamos para que a ese dato lo grafique como a un numero, es decir, en lugar de 1000 lo coloca como 1,000 -->
+    </li>
+</ul>

@@ -1,0 +1,18 @@
+<h3>Agregar {{nuevo.nombre}}</h3>
+<hr>
+
+<form (ngSubmit)="agregar()">  <!-- Cada evento que disparamos puede recibir el $event. Esto quiere decir que nos interesa recibir en este caso, todo el evento del formulario. Este evento, lo recibimos en la funcion agregar, donde le haremos un event.preventDefault() para que no se recargue toda la pagina cada vez que mandamos el form -->
+    <input 
+        type="text" 
+        placeholder="Nombre"
+        name="nombre"
+        [(ngModel)]="nuevo.nombre" 
+    > 
+    <input 
+        type="number" 
+        placeholder="Poder"
+        name="poder"
+        [(ngModel)]="nuevo.poder" 
+    >
+    <button type="submit">Agregar</button>
+</form>
